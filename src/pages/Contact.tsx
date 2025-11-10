@@ -264,7 +264,7 @@ const Contact = () => {
                     </div>
 
                     {/* Map */}
-                    <div className="aspect-video lg:aspect-square bg-muted rounded-lg overflow-hidden relative group cursor-pointer">
+                    <div className="aspect-[4/3] lg:aspect-[3/2] bg-muted rounded-lg overflow-hidden relative group cursor-pointer">
                       <div onClick={() => setSelectedOffice(index)} className="w-full h-full">
                         <LocationMap 
                           lat={office.lat}
