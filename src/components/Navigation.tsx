@@ -33,9 +33,9 @@ const Navigation = () => {
       scrolled || location.pathname !== '/' ? 'bg-background/98 backdrop-blur-lg shadow-xl border-b border-border/50' : 'bg-background/40 backdrop-blur-md border-b border-white/10'
     }`}>
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20 lg:justify-center lg:gap-8">
-          <Link to="/" className="flex items-center lg:absolute lg:left-4">
-            <h1 className={`text-xl md:text-2xl font-serif font-bold tracking-wide transition-all duration-300 ${
+        <div className="flex items-center justify-between h-20">
+          <Link to="/" className="flex items-center flex-shrink-0">
+            <h1 className={`text-base lg:text-lg font-serif font-bold tracking-wide transition-all duration-300 ${
               scrolled || location.pathname !== '/' ? 'text-foreground' : 'text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]'
             }`}>
               PRECISION SMILE ORTHODONTICS
@@ -43,12 +43,12 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center justify-center gap-2">
+          <div className="hidden lg:flex items-center gap-1.5 ml-4">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`px-3 py-2 text-sm font-medium transition-all duration-300 whitespace-nowrap ${
+                className={`px-2.5 py-2 text-xs font-medium transition-all duration-300 whitespace-nowrap ${
                   scrolled || location.pathname !== '/'
                     ? isActive(item.path)
                       ? "text-primary font-semibold"
