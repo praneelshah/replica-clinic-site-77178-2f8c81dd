@@ -15,7 +15,7 @@ const Footer = () => {
               <MapPin size={16} className="mt-1 flex-shrink-0" />
               <div>
                 <p className="font-semibold mb-1">Main Office:</p>
-                <p className="text-primary-foreground/80">401 Commerce Drive, Suite 104 & 204<br />Fort Washington, PA 19034</p>
+                <p className="text-primary-foreground/80">1247 South Cedar Crest Boulevard, Suite 300<br />Allentown, PA 18103</p>
               </div>
             </div>
           </div>
