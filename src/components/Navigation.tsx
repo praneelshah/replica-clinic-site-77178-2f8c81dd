@@ -43,7 +43,7 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-1.5 ml-4">
+          <div className="hidden xl:flex items-center gap-1.5 ml-4">
             {navItems.map((item) => (
               <Link
                 key={item.path}
@@ -68,7 +68,7 @@ const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className={`lg:hidden p-2 transition-all duration-300 ${scrolled || location.pathname !== '/' ? 'text-foreground' : 'text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]'} hover:scale-110`}
+            className={`xl:hidden p-2 transition-all duration-300 ${scrolled || location.pathname !== '/' ? 'text-foreground' : 'text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]'} hover:scale-110`}
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -78,7 +78,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden pb-4 space-y-2 bg-background/98 backdrop-blur-lg rounded-b-lg shadow-xl animate-in slide-in-from-top-4 duration-300">
+          <div className="xl:hidden pb-4 space-y-2 bg-background/98 backdrop-blur-lg rounded-b-lg shadow-xl animate-in slide-in-from-top-4 duration-300">
             {navItems.map((item, index) => (
               <Link
                 key={item.path}
