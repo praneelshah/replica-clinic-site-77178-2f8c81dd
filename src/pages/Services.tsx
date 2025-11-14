@@ -3,8 +3,8 @@ import { CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import servicesHero from "@/assets/services-hero.jpg";
-import dentalCheckup from "@/assets/dental-checkup.jpg";
-import cosmeticDentistry from "@/assets/cosmetic-dentistry.jpg";
+import dentalCheckup from "@/assets/preventive-care.png";
+import cosmeticDentistry from "@/assets/cosmetic-dentistry-new.jpg";
 import AnimatedSection from "@/components/AnimatedSection";
 
 const Services = () => {
@@ -85,14 +85,14 @@ const Services = () => {
               <Card className="overflow-hidden border-0 shadow-2xl bg-background group">
                 <div className="aspect-[4/3] overflow-hidden relative">
                   <img
-                    src={dentalCheckup}
-                    alt="Dental Checkup"
+                    src={cosmeticDentistry}
+                    alt="Cosmetic Dentistry"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   <div className="absolute bottom-6 left-6 text-white">
-                    <h3 className="text-3xl font-serif font-light">Preventive Care</h3>
-                    <p className="text-sm mt-2 opacity-90">Regular checkups & cleanings</p>
+                    <h3 className="text-3xl font-serif font-light">Cosmetic Dentistry</h3>
+                    <p className="text-sm mt-2 opacity-90">Whitening, veneers & more</p>
                   </div>
                 </div>
               </Card>
@@ -102,14 +102,14 @@ const Services = () => {
               <Card className="overflow-hidden border-0 shadow-2xl bg-background group">
                 <div className="aspect-[4/3] overflow-hidden relative">
                   <img
-                    src={cosmeticDentistry}
-                    alt="Cosmetic Dentistry"
+                    src={dentalCheckup}
+                    alt="Preventive Care"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   <div className="absolute bottom-6 left-6 text-white">
-                    <h3 className="text-3xl font-serif font-light">Cosmetic Dentistry</h3>
-                    <p className="text-sm mt-2 opacity-90">Whitening, veneers & more</p>
+                    <h3 className="text-3xl font-serif font-light">Preventive Care</h3>
+                    <p className="text-sm mt-2 opacity-90">Regular checkups & cleanings</p>
                   </div>
                 </div>
               </Card>

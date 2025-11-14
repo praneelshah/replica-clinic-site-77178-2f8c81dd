@@ -13,6 +13,7 @@ const Doctors = () => {
       name: "Dr. Thomas Rollins",
       title: "DDS, Orthodontist",
       image: drRollins,
+      phone: "610-301-0295",
       yearsExperience: "15+",
       patientsServed: "5000+",
       rating: "4.9",
@@ -209,7 +210,13 @@ const Doctors = () => {
                             <p className="text-muted-foreground leading-relaxed">{doctor.background}</p>
                           </div>
 
-                          <div className="pt-4">
+                          <div className="pt-4 space-y-3">
+                            {doctor.phone && (
+                              <a href={`tel:${doctor.phone}`} className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-semibold">
+                                <Phone className="w-4 h-4" />
+                                {doctor.phone}
+                              </a>
+                            )}
                             <Link to="/contact">
                               <Button size="lg" className="w-full sm:w-auto group/btn">
                                 <Calendar className="mr-2 h-5 w-5 group-hover/btn:scale-110 transition-transform" />
