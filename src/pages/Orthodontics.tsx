@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import orthodonticsImage from "@/assets/orthodontics.jpg";
+import orthodonticsImage from "@/assets/orthodontics-hero.jpg";
 import { CheckCircle, DollarSign, Clock, Award } from "lucide-react";
 
 const Orthodontics = () => {
@@ -64,17 +64,19 @@ const Orthodontics = () => {
       {/* Hero Section */}
       <section className="relative py-32 overflow-hidden">
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-20"
+          className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${orthodonticsImage})` }}
-        />
-        <div className="relative container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6">
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
+        </div>
+        <div className="relative container mx-auto px-4 text-center text-white">
+          <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
             BRACES
           </h1>
-          <p className="text-3xl font-bold text-accent mb-4">
+          <p className="text-3xl font-bold mb-4 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
             AS LOW AS $149 Per Month For Braces
           </p>
-          <Button size="lg" asChild>
+          <Button size="lg" asChild className="shadow-xl">
             <a href="tel:8168803900">Call Now! (816) 880-3900</a>
           </Button>
         </div>
