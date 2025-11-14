@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import heroImage from "@/assets/hero-dental.jpg";
-import smileImage from "@/assets/smile-patient.jpg";
+import dentalCheckupImage from "@/assets/dental-checkup.jpg";
 import orthodonticsImage from "@/assets/orthodontics.jpg";
 import { CheckCircle, Clock, CreditCard, Users } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -46,7 +46,7 @@ const Home = () => {
     {
       title: "General Dentistry",
       description: "Comprehensive dental care for the entire family",
-      image: smileImage,
+      image: dentalCheckupImage,
       link: "/services",
     },
     {
