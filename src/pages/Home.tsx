@@ -66,7 +66,7 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden pt-20">
         <video
           ref={videoRef}
           autoPlay
@@ -76,20 +76,20 @@ const Home = () => {
         >
           <source src="/hero-dental-video.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50" />
         
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
-          <div className="space-y-6 animate-fade-in">
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif font-light tracking-wider mb-8">
+          <div className="space-y-4 animate-fade-in">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-light tracking-wider mb-6">
               <span className="block">Your Smile,</span>
               <span className="block italic font-normal">Our Passion</span>
             </h1>
-            <div className="h-px w-24 bg-accent mx-auto my-8"></div>
-            <p className="text-lg md:text-xl max-w-xl mx-auto font-light tracking-wide opacity-90">
+            <div className="h-px w-20 bg-accent mx-auto my-6"></div>
+            <p className="text-base md:text-lg max-w-xl mx-auto font-light tracking-wide opacity-90">
               Complete comprehensive cosmetic dental care destination
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8 animate-fade-in" style={{ animationDelay: '0.3s' }}>
             <Button size="lg" asChild className="bg-accent hover:bg-accent/90 text-accent-foreground border-0">
               <Link to="/contact">Schedule Consultation</Link>
             </Button>
