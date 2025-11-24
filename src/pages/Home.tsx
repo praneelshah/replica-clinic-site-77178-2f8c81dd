@@ -1,22 +1,28 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import heroImage from "@/assets/hero-dental.jpg";
 import dentalCheckupImage from "@/assets/dental-checkup.jpg";
 import orthodonticsImage from "@/assets/orthodontics.jpg";
 import { CheckCircle, Clock, CreditCard, Users } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 const Home = () => {
-  const [parallaxOffset, setParallaxOffset] = useState(0);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setParallaxOffset(window.scrollY * 0.5);
+    const video = videoRef.current;
+    if (!video) return;
+
+    const handleTimeUpdate = () => {
+      if (video.currentTime >= 19) {
+        video.currentTime = 0;
+        video.play();
+      }
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    video.addEventListener('timeupdate', handleTimeUpdate);
+    return () => video.removeEventListener('timeupdate', handleTimeUpdate);
   }, []);
 
   const features = [
@@ -61,15 +67,16 @@ const Home = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out"
-          style={{ 
-            backgroundImage: `url(${heroImage})`,
-            transform: `translateY(${parallaxOffset}px) scale(1.1)`
-          }}
+        <video
+          ref={videoRef}
+          autoPlay
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
-        </div>
+          <source src="/hero-dental-video.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
         
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <div className="space-y-6 animate-fade-in">
