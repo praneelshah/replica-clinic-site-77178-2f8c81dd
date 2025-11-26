@@ -5,6 +5,7 @@ import { GraduationCap, Award, Heart, Mail, Phone, Star, Calendar, Users } from 
 import AnimatedSection from "@/components/AnimatedSection";
 import drRollins from "@/assets/dr-rollins-enhanced.jpg";
 import drMalerman from "@/assets/dr-malerman-enhanced.jpg";
+import drLockwood from "@/assets/dr-lockwood.jpg";
 import { Link } from "react-router-dom";
 
 const Doctors = () => {
@@ -51,6 +52,27 @@ const Doctors = () => {
       bio: "Dr. Malerman is a highly experienced orthodontist dedicated to making beautiful smiles one patient at a time. With years of practice and a commitment to staying current with the latest orthodontic advances, he provides personalized care tailored to each patient's unique needs.",
       philosophy: "Creating beautiful, healthy smiles is more than a profession—it's a calling. Dr. Malerman takes pride in building lasting relationships with patients and their families while delivering exceptional orthodontic results.",
       background: "Known for his gentle approach and attention to detail, Dr. Malerman has built a reputation as a trusted orthodontist in the community. His practice focuses on providing quality care in a comfortable, welcoming environment.",
+    },
+    {
+      name: "Dr. Danielle Lockwood",
+      title: "DMD, Pediatric Dentist",
+      image: drLockwood,
+      yearsExperience: "10+",
+      patientsServed: "3000+",
+      rating: "4.9",
+      education: [
+        "Doctor of Dental Medicine - Temple University Kornberg School of Dentistry",
+        "Advanced Specialty Training in Pediatric Dentistry - St. Christopher's Hospital for Children",
+      ],
+      specialties: [
+        "Pediatric dentistry",
+        "Special needs care",
+        "Preventive dental care",
+        "Behavior guidance",
+      ],
+      bio: "Dedicated to creating a welcoming 'dental home' for every child, Dr. Lockwood is passionate about helping young patients build positive, lifelong relationships with oral health. She has a special love for caring for children with special needs and strives to ensure each visit is comfortable, compassionate, and tailored to every child's unique needs.",
+      philosophy: "With her warm approach and commitment to individualized care, Dr. Lockwood works closely with families to make dental visits both educational and enjoyable.",
+      background: "Dr. Lockwood earned her Doctor of Dental Medicine degree from the Temple University Kornberg School of Dentistry before completing advanced specialty training in pediatric dentistry at St. Christopher's Hospital for Children.",
     },
   ];
 
